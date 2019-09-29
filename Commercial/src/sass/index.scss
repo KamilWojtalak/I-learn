@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'global-styles';
+@import 'default-section';
+@import 'form';
+@import 'header-navigation';
+@import 'header';
+@import 'legend';
+@import 'rest';
+@import 'scrollbar';
+
+body {
+    color: red;
+    background-color: #fff;
+}
