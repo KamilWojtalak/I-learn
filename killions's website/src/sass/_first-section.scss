@@ -1,0 +1,35 @@
+.first-section {
+
+    .first-section__first-part {
+        position: relative;
+        .first-part__bgimage {
+
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .first-section__second-part {
+        position: relative;
+
+        .first-part__bgimage {
+
+        }
+
+        .second-part__number {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 38px;
+            letter-spacing: 4px;
+            position: absolute;
+            top: 2.5%;
+            right: 5%;
+            color: #004278;
+            .second-part__5 {
+                font-weight: 500;
+                font-size: 66px;
+                color: #e61b26;
+            }
+        }
+    }
+}

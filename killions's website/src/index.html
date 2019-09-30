@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="sass/index.css">
 </head>
 <body>
 
@@ -36,34 +36,34 @@ if(isset($_POST['submit'])){
     
 ?> -->
 
-<header id="masthead" class="header site-header">
+<header id="masthead" class="header site-header no-select">
     <div class="header__blue"></div>
-        <div class="wrapper">
-            <div class="header__title_area">
-                <h1 class="header__title_h1">
-                        <a href="#" class="header__title_link">killion munyama</a><img class="menu-icon" src="images/menu.png" alt="menu"/> <!-- <?php echo get_template_directory_uri()?> -->
-                </h1>
-            </div>
-
-            <nav class="header__navigation">
-                <ul class="header__navigation__list">
-                    <li class="header__navigation__item"><a href="#o-mnie" class="header__navigation__link">o mnie</a></li>
-                    <li class="header__navigation__item"><a href="#program" class="header__navigation__link">wybory</a></li>
-                    <li class="header__navigation__item"><a href="#spotkaj-killiona" class="header__navigation__link">spotkaj killiona</a></li>
-                    <li class="header__navigation__item"><a href="#killion-w-mediach" class="header__navigation__link">killion w mediach</a></li>
-                </ul>
-            </nav>
+    <div class="wrapper80 header__navigation_wrapper">
+        <div class="header__title_area">
+            <h1 class="header__title_h1">
+                <a href="#" class="header__title_link">killion munyama</a>
+            </h1>
         </div>
+
+        <nav class="header__navigation">
+            <ul class="header__navigation__list">
+                <li class="header__navigation__item"><a href="#o-mnie" class="header__navigation__link">o mnie</a></li>
+                <li class="header__navigation__item"><a href="#program" class="header__navigation__link">wybory</a></li>
+                <li class="header__navigation__item"><a href="#spotkaj-killiona" class="header__navigation__link">spotkaj killiona</a></li>
+                <li class="header__navigation__item"><a href="#killion-w-mediach" class="header__navigation__link">killion w mediach</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <section class="first-section">
+        <section class="first-section section">
             <div class="first-section__first-part">
                 <div class="first-part__bgimage">
                     <img class="first-part__image" src="images/FirstImage.png" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
-                        <h2 class="first-section__header">"Zawsze Otwarty"</h2>
                         <div class="first-part__form_wrapper">
+                            <h2 class="first-section__header">"Zawsze Otwarty"</h2>
                             <form action="" class="first-part__form" method="post">
                                     <input type="tel" name="tel" required class="first-part__input" placeholder="NR TELEFONU*" title="Podaj numer telefonu" autofocus>
                                     <input type="text" name="kod" pattern="[0-9]{2}\-[0-9]{3}"  title="FORMAT XX-XXX" class="first-part__input" placeholder="KOD POCZTOWY">
@@ -76,7 +76,7 @@ if(isset($_POST['submit'])){
                 </div>
             <div class="first-section__second-part">
                 <div class="first-part__bgimage">
-                    <img class="second-part__image" src="images/FirstImage.jpg" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
+                    <img class="second-part__image maxwidth-image" src="images/FirstImage.jpg" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
                         <div class="second-part__number no-select">nr<span class="second-part__5">5</span></div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ if(isset($_POST['submit'])){
 
             <!--  Second Section Started -->
 
-            <section class="section" id="o-mnie">
+            <section class="section no-select" id="o-mnie">
                 <div class="section__first-part">
                     <ul class="first-part__list">
                         <li class="first-part__item"><a href="#section__second__part" class="first-section__link text-blue">samorządy </a></li>
@@ -105,7 +105,7 @@ if(isset($_POST['submit'])){
 
             <!--  Third Section Started -->
 
-            <section class="section" id="program">
+            <section class="section no-select" id="program">
                 <div class="section__first-part">
                     <svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 764.17 842" style="enable-background:new 0 0 764.17 842;" xml:space="preserve">
@@ -251,7 +251,7 @@ if(isset($_POST['submit'])){
                     </svg>
                 </div>
 
-                <div class="section__second-part">
+                <div class="section__second-part no-select">
                     <div class="section__wrapper upper">
                         <h3 class="section__header_program text-blue text-center">GŁOSUJ NA MNIE W POWIECIE WOLSZTYŃSKIM</h3>
                         <ul class="section__list_demands ">
@@ -268,7 +268,7 @@ if(isset($_POST['submit'])){
             <!--  Fourth Section Started -->
 
 
-            <section class="section extended" id="spotkaj-killiona">
+            <section class="section extended no-select" id="spotkaj-killiona">
                 <div class="section__first-part section_red">
                     <div class="section__wrapper upper text-white">
                         <div class="section__date_red text-center">
@@ -336,7 +336,7 @@ if(isset($_POST['submit'])){
 
     
 
-    <section class="section__koalicja-obywatelska_image"><img src="images/KO_logo.gif" class='section__koalicja-obywatelska_image' alt="Logo koalicji obywatelskiej"></section> <!-- <?php echo get_template_directory_uri()?> -->
+    <section class="section__koalicja-obywatelska_image no-select"><img src="images/KO_logo.gif" class='maxwidth-image' alt="Logo koalicji obywatelskiej"></section> <!-- <?php echo get_template_directory_uri()?> -->
     <!-- Fifth Section End -->
 
     </main><!-- #main -->

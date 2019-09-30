@@ -45,10 +45,6 @@
     background-color: #DE173E;
 }
 
-.text-white {
-    color: white;
-}
-
 .text-blue {
     color: #004287;
 }
@@ -69,6 +65,13 @@
         height: 10px;
         cursor: pointer;
     }
+}
+
+
+
+.maxwidth-image {
+    max-width: 100%;
+    object-fit: cover;
 }
 
 //                      GLOBAL STYLES
