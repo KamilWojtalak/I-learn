@@ -41,12 +41,12 @@
     margin: 0 auto;
 }
 
-.section_red {
-    background-color: #DE173E;
-}
-
 .text-blue {
     color: #004287;
+}
+
+.text-orange {
+    color: #F90;
 }
 
 .section__media {
@@ -67,7 +67,9 @@
     }
 }
 
-
+iframe {
+    max-width: 100%;
+}
 
 .maxwidth-image {
     max-width: 100%;

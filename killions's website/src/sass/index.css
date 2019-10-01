@@ -32,12 +32,12 @@
   margin: 0 auto;
 }
 
-.section_red {
-  background-color: #DE173E;
-}
-
 .text-blue {
   color: #004287;
+}
+
+.text-orange {
+  color: #F90;
 }
 
 .section__media {
@@ -59,6 +59,10 @@
     height: 10px;
     cursor: pointer;
   }
+}
+
+iframe {
+  max-width: 100%;
 }
 
 .maxwidth-image {
@@ -176,7 +180,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 0 70px 0;
+  padding: 30px 0 40px 0;
 }
 
 .header__navigation .header__navigation__list .header__navigation__item {
@@ -187,8 +191,8 @@
   display: block;
   text-transform: uppercase;
   font-weight: 300;
-  color: white;
   font-size: 24px;
+  color: #707070;
 }
 
 .header__navigation .header__navigation__list .header__navigation__item .active {
@@ -220,7 +224,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 12vh;
   width: 100vw;
   background: #213e5e;
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #213e5e), color-stop(100%, #14488c));
@@ -261,6 +265,118 @@
 
 .header .header__navigation_wrapper .header__title_area .header__title_h1 .header__title_link .menu-icon {
   display: none;
+}
+
+.section__ym__legend .section__ym__legend__list {
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section__ym__legend .section__ym__legend__list .section__ym__legend__list__item {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__ym__legend .section__ym__legend__list .section__ym__legend__list__item-first {
+  font-weight: 500;
+}
+
+.legend__powiat-grodziski,
+.legend__powiat-nowotomyski,
+.legend__powiat-wolsztynski,
+.legend__powiat-miedzychodzki,
+.legend__powiat-chodzieski,
+.legend__powiat-zlotowski,
+.legend__powiat-pilski,
+.legend__powiat-wagrowiecki,
+.legend__powiat-szamotulski,
+.legend__powiat-obornicki,
+.legend__powiat-czarnkowsko-trzcianecki {
+  position: relative;
+}
+
+.legend__powiat-grodziski::before,
+.legend__powiat-nowotomyski::before,
+.legend__powiat-wolsztynski::before,
+.legend__powiat-miedzychodzki::before,
+.legend__powiat-chodzieski::before,
+.legend__powiat-zlotowski::before,
+.legend__powiat-pilski::before,
+.legend__powiat-wagrowiecki::before,
+.legend__powiat-szamotulski::before,
+.legend__powiat-obornicki::before,
+.legend__powiat-czarnkowsko-trzcianecki::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -5%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend__powiat-grodziski::before {
+  background-color: #9332fa;
+}
+
+.legend__powiat-nowotomyski::before {
+  background-color: #00AEEF;
+}
+
+.legend__powiat-wolsztynski::before {
+  background-color: #028279;
+}
+
+.legend__powiat-miedzychodzki::before {
+  background-color: #FC833E;
+}
+
+.legend__powiat-chodzieski::before {
+  background-color: #8fd625;
+}
+
+.legend__powiat-zlotowski::before {
+  background-color: #FF4E9B;
+}
+
+.legend__powiat-pilski::before {
+  background-color: #2E3192;
+}
+
+.legend__powiat-wagrowiecki::before {
+  background-color: #ffd900;
+}
+
+.legend__powiat-szamotulski::before {
+  background-color: #FF475D;
+}
+
+.legend__powiat-obornicki::before {
+  background-color: #00e0d5;
+}
+
+.legend__powiat-czarnkowsko-trzcianecki::before {
+  background-color: #bf00c5;
 }
 
 html {
@@ -346,5 +462,120 @@ body::-webkit-scrollbar-thumb {
 .section__place-for-description .second-part__image {
   max-width: 200%;
   margin-left: -50%;
+}
+
+.section_red {
+  background-color: #DE173E;
+  min-height: 70vh;
+}
+
+.section_red .section__date_red {
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+  text-transform: uppercase;
+}
+
+.section_red .section__date_red .section_date__day-of-week,
+.section_red .section__date_red .section__date__month {
+  font-size: 48px;
+}
+
+.section_red .section__date_red .section_date__day-of-month {
+  font-size: 72px;
+}
+
+.section_red .section__meet_red .section__list_red {
+  padding: 0 0 50px 0;
+}
+
+.section_red .section__meet_red .section__list_red .section__item_red {
+  color: white;
+}
+
+.section_red .section__meet_red .section__list_red .section__item_red .section__span_red {
+  position: relative;
+}
+
+.section_red .section__meet_red .section__list_red .section__item_red .section__span_red:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #A186BE;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-box-shadow: 0px 0px 0px 5px white;
+          box-shadow: 0px 0px 0px 5px white;
+}
+
+.section__ym__date {
+  text-align: center;
+}
+
+.section__ym__date .section__ym__date-year {
+  font-size: 52px;
+  font-weight: 500;
+  padding: 50px 0 0 0;
+}
+
+.section__ym__date .section__ym__date-month {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.section__ym__date .fa-caret-left,
+.section__ym__date .fa-caret-right {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.day-of-month-string__list,
+.day-of-month-numeric__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  text-align: center;
+}
+
+.day-of-month-string__list .day-of-month-string__item,
+.day-of-month-numeric__list .day-of-month-string__item {
+  padding: 0 0 10px 0;
+}
+
+.day-of-month-numeric__list {
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 20px 0;
+}
+
+.day-of-month-numeric__list .day-of-month-numeric__item {
+  padding: 10px;
+}
+
+.section__program {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section__program .section__header_program {
+  font-size: 28px;
+}
+
+.section__program .section__list_demands {
+  padding: 50px 0;
+}
+
+.section__program .section__list_demands .section__item_demands {
+  font-size: 18px;
+  padding: 10px 0;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,17 @@
+.section__program {
+    text-align: center;
+    text-transform: uppercase;
+
+    .section__header_program {
+        font-size: 28px;
+    }
+
+    .section__list_demands {
+        padding: 50px 0;
+
+        .section__item_demands {
+            font-size: 18px;
+            padding: 10px 0;
+        }
+    }
+}
