@@ -42,10 +42,11 @@ if(isset($_POST['submit'])){
 <header id="masthead" class="header site-header no-select">
     <div class="header__blue"></div>
     <div class="wrapper80 header__navigation_wrapper">
-        <div class="header__title_area">
+        <div class="header__title_area wrapper80">
             <h1 class="header__title_h1">
-                <a href="#" class="header__title_link">killion munyama</a>
+                killion munyama
             </h1>
+            <img src="images/menu.png" alt="Menu Responsive" class="header__menu"> <!-- <?php echo get_template_directory_uri()?> --> 
         </div>
 
         <nav class="header__navigation">
@@ -79,7 +80,7 @@ if(isset($_POST['submit'])){
                 </div>
             <div class="first-section__second-part">
                 <div class="first-part__bgimage">
-                    <img class="second-part__image maxwidth-image" src="images/FirstImage.jpg" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
+                    <img class="second-part__image" src="images/FirstImage.jpg" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
                         <div class="second-part__number no-select">nr<span class="second-part__5">5</span></div>
                     </div>
                 </div>
@@ -99,7 +100,7 @@ if(isset($_POST['submit'])){
                     </ul>
                 </div>
                 <div class="section__second-part section__place-for-description" id='section__second__part'>
-                    <div class="description__container"></div>
+                    <div class="description__container wrapper80"></div>
                     <img class="second-part__image" src="images/ThirdImage.jpg" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
                 </div>
             </section>
