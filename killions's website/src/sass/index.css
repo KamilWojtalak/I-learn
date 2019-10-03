@@ -71,6 +71,14 @@
   fill: rgba(231, 0, 0, 0.788);
 }
 
+.day-of-month-numeric__item:hover {
+  cursor: pointer;
+}
+
+.highlight {
+  border: 3px solid #F90;
+}
+
 .section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,6 +254,12 @@
 @media (min-width: 1024px) {
   .header__navigation .header__navigation__list .header__navigation__item {
     padding: 0 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__navigation .header__navigation__list .header__navigation__item {
+    padding: 0 22px;
   }
 }
 
@@ -696,11 +710,11 @@ body::-webkit-scrollbar-thumb {
   color: white;
 }
 
-.section_red .section__meet_red .section__list_red .section__item_red .section__span_red {
+.section_red .section__meet_red .section__list_red .section__span_red {
   position: relative;
 }
 
-.section_red .section__meet_red .section__list_red .section__item_red .section__span_red:before {
+.section_red .section__meet_red .section__list_red .section__span_red:before {
   content: '';
   width: 10px;
   height: 10px;
@@ -813,5 +827,11 @@ body::-webkit-scrollbar-thumb {
 .section__media iframe {
   margin: 0 auto;
   padding: 100px 0;
+}
+
+@media (min-width: 1024px) {
+  .section__media iframe {
+    min-height: 80vh;
+  }
 }
 /*# sourceMappingURL=index.css.map */

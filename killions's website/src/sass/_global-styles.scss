@@ -76,6 +76,16 @@
     fill: rgba(231, 0, 0, 0.788);
 }
 
+.day-of-month-numeric__item {
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.highlight {
+    border: 3px solid #F90;
+}
 //                      GLOBAL STYLES
 //                      GLOBAL STYLES
 //                      GLOBAL STYLES

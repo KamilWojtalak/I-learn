@@ -14,11 +14,11 @@
 
 <!-- <?php
 if(isset($_POST['submit'])){
-    $to = "poselkillionmunyama@gmail.com"; // this is your Email address
-    $from = test_input($_POST['email']);; // this is the sender's Email address
-    $tel = test_input($_POST['tel']);;
-    $kod = test_input($_POST['kod']);;
-    $content = test_input($_POST['message']);;
+    $to = "poselkillionmunyama@gmail.com"; 
+    $from = test_input($_POST['email']);
+    $tel = test_input($_POST['tel']);
+    $kod = test_input($_POST['kod']);
+    $content = test_input($_POST['message']);
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = " Numer telefonu: " . $tel . " Kod Pocztowy: " . $kod . " Wiadomość: " . "\n\n" . $content;
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
     $headers2 = "From:" . $to;
     
     mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    mail($from,$subject2,$message2,$headers2); 
     }
 
     function test_input($data) {
@@ -307,7 +307,7 @@ if(isset($_POST['submit'])){
                         <li class="day-of-month-string__item">ndz</li>
                     </ul>
                     <ul class="day-of-month-numeric__list">
-                
+                        
                     </ul>
                 </div>
                     <div class="section__ym__legend">
@@ -349,6 +349,6 @@ if(isset($_POST['submit'])){
         
     
 
- <script src="js/app.js" class="script"></script>
+ <script src="js/app.js" class="script" type="module"></script>
 </body>
 </html>
