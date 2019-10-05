@@ -1,9 +1,9 @@
-import { HandleNavigation } from './navigation-handling.js';
+import { HandleNavigation } from './js/navigation-handling.js';
 const handleNavigation = new HandleNavigation();
-import { SvgMap } from './svg-map.js';
-import { RenderCalendar } from './render.js';
+import { SvgMap } from './js/svg-map.js';
+import { RenderCalendar } from './js/render.js';
 
-import { AboutMe } from './about-me.js';
+import { AboutMe } from './js/about-me.js';
 const aboutMe = new AboutMe();
 
 
