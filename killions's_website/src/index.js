@@ -10,7 +10,7 @@ const aboutMe = new AboutMe();
 window.onload = () => {
     const request = new XMLHttpRequest();
     const script = document.querySelector('.script'); // Get script from DOM
-    const src = script.src.replace('app.js', 'calendar.json');
+    const src = script.src.replace('index.js', 'calendar.json');
     request.open('GET', src);
     request.responseType = 'json';
     request.send();
