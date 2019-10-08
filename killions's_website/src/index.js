@@ -6,6 +6,9 @@ import { RenderCalendar } from './js/render.js';
 import { AboutMe } from './js/about-me.js';
 const aboutMe = new AboutMe();
 
+import { MenuResponsive } from './js/menu-responsive.js';
+const menuResponsive = new MenuResponsive();
+
 
 window.onload = () => {
     const request = new XMLHttpRequest();
@@ -26,6 +29,7 @@ window.onload = () => {
         renderCalendar.renderDayOfMonth();
         renderCalendar.updateInitialInformations();
         renderCalendar.giveArrowsListeners();
+        menuResponsive.giveEventListener();
     }
 
     aboutMe.giveListeners();
