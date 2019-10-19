@@ -34,7 +34,7 @@ class App extends Component {
     })
   }
 
-  this.siema = 'siema';
+  siema = 'siema';
   
     render() {
       return (
