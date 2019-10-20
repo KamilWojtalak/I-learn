@@ -3,4 +3,24 @@
     color: white;
     padding: 16px;
     border-radius: 3px;
+    min-width: 400px;
+    margin: 20px auto;
+    border: 1px solid white;
+}
+body {
+    background-color: #000;
+    font-family: oswald;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    border: 1px solid white;
+    background-color: #000;
+    color: white;
+    padding: 12px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 25px;
 }
