@@ -2,21 +2,25 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  background-color: #000;
+  color: rgb(212, 211, 211);
+  font-family: sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.person {
+  padding: 20px;
+  border: 1px solid rgb(196, 196, 196);
+  max-width: 400px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #09d3ac;
+button {
+  background-color: #000;
+  color: rgb(228, 228, 228);
+  border: 1px solid #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
