@@ -24,18 +24,25 @@ class App extends Component {
   }
 
   render() {
+
+    let persons = null;
+
+    if (this.state.showPersons) {
+      persons = 
+        <div>  
+          <Person />
+          <Person />
+          <Person />
+        </div>
+      
+    }
     return (
       <div className='App'>
         <h1>Hi, there!</h1>
         <button onClick={this.togglePersonsHandler}>I am a Baton</button>
-        {
-        this.state.showPersons ?
-          <div>  
-            <Person />
-            <Person />
-            <Person />
-          </div> : null
-        }
+        
+      { persons }
+
       </div>
     )
   }
