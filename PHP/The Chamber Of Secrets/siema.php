@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>siema</h1>
+    <h1>Siema</h1>
+    <?php
+    
+    class siema {
+        function doSomething() {
+            return '<br />' . 'Something' ;
+        }
+    }
+
+    $siemaszko = new siema();
+
+    echo gettype($siemaszko->doSomething());
+    echo $siemaszko->doSomething()
+
+    ?>
 </body>
 </html>
