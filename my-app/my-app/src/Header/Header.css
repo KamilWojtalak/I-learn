@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
 }
-.header__item:hover {
+.header__item:hover,
+.header__title:hover {
     color: white;
 }
