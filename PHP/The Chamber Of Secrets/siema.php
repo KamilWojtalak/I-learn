@@ -12,8 +12,22 @@
     <?php include 'header.html' ?>
 
     <?php
-    
+        $title = 'Mój pierwrszy artykuł';
+        $first__description = 'Mój dzień...';
+        $second__description = 'Dlaczego uczę się usseles rzeczy w szkole?';
 
+        include 'article.php'
+    ?>
+    
+    <?php 
+        $title = 'Mój drugi atrykuł';
+        $first__description = 'Nie wiem co napisać, więc napiszę jakeiś głupoty';
+        $second__description = 'Jakieś głupoty v2, ale troche dłuższe, bo tekst musi troche zająć';
+
+        include 'article.php';
+    ?>
+
+    <?php
     class siema {
         function doSomething() {
             return 'Something' ;
@@ -61,6 +75,23 @@
     echo '<br />';
     echo $TestVar->reverse_string('siema');
     echo $TestVar->lower_case(' Siema Co TAm');
+    echo '<br />';
+    echo '<br />';
+
+
+    include 'Osoba/Osoba.php';
+    $Kamil = new Osoba('Kamil', 'Wojtalak', 'dobrej muzy');
+    $Patryk = new osoba('Patryk', 'RODO', 'słabej muzy, proste');
+
+    $Kamil->getFirstName();
+    $Kamil->changeLastName('Wróbel');
+    $Kamil->getLastName();
+    echo '<br />';
+    echo '<br />';
+
+    $KamilWojtalak = new KamilWojtalak('Kamil', 'Wojtalak', 'dobrej muzy');
+    $KamilWojtalak->specjalnaFunkcja();
+    
     ?>
 </body>
 </html>
