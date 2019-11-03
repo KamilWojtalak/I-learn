@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="siema.css">
 </head>
 <body>
-    <h1>Siema</h1>
+
+    <?php include 'header.html' ?>
+
     <?php
     
+
     class siema {
         function doSomething() {
             return 'Something' ;
@@ -56,6 +60,7 @@
 
     echo '<br />';
     echo $TestVar->reverse_string('siema');
+    echo $TestVar->lower_case(' Siema Co TAm');
     ?>
 </body>
 </html>
