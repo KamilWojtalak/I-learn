@@ -9,3 +9,5 @@ Sentence.prototype.getSentenceWithSomething = function() {
 const randomSentence = new Sentence('This is random sentence');
 
 console.log(randomSentence.getSentenceWithSomething());
+console.log(randomSentence.sentence);
+
