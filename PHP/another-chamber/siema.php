@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
+    <!-- <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
 
         <label for="sentence">Wpisz zdanie</label> <br/>
         <input type="text" name="sentence" id="sentence" class='input__sentence' require> <br/>
@@ -35,35 +35,42 @@
         <input type="submit" value="Rozpocznij algorytm"><br/>
 
     </form>
-
+ -->
 
 <?php 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
-    if ($_POST['sentence'] == '') {
-        $sentence = '';
-    } else {
-        $sentence = $_POST['sentence'];
-    }
+//     if ($_POST['sentence'] == '') {
+//         $sentence = '';
+//     } else {
+//         $sentence = $_POST['sentence'];
+//     }
 
-    if ($_POST['number'] == '') {
-        $number = 0;
-    } else {
-        $number = $_POST['number'];
-    }
-    if ($_POST['action'] == '') {
-        $action = '';
-    } else {
-        $action = $_POST['action'];
-    }
+//     if ($_POST['number'] == '') {
+//         $number = 0;
+//     } else {
+//         $number = $_POST['number'];
+//     }
+//     if ($_POST['action'] == '') {
+//         $action = '';
+//     } else {
+//         $action = $_POST['action'];
+//     }
     
 
-    $exploded_sentence = explode(' ', $sentence);
-    $word_count = sizeof($exploded_sentence);
+//     $exploded_sentence = explode(' ', $sentence);
+//     $word_count = sizeof($exploded_sentence);
 
-    echo $_POST['action'];
+//     echo $_POST['action'];
+// }
+
+$string = 'Siema jestem jakimś zdaniem losowym!';
+$siema = explode(' ', $string);
+
+for ($i = 0; $i < count($siema); $i++) {
+    echo $siema[$i] . ' ';
 }
 
 ?>
