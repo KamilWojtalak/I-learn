@@ -2,12 +2,10 @@
 
 $sentence = 'Siema jakieś losowe zdanie';
 
-$siema = explode(' ', $sentence);
+$exploded = explode(' ', $sentence);
 
-echo $siema[0][0];
+$newString = substr($sentence, strlen($exploded[0]) + 1, strlen($exploded[1]));
 
-$recoveredSentence = implode(' ', $siema);
-
-echo $recoveredSentence;
+echo $newString;
 
 ?>
