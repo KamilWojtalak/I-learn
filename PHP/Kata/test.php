@@ -6,18 +6,22 @@
 // echo $newString;
 
 
-$siema = 'siema';
-$siema2 = 'siema';
+// $siema = 'siema';
+// $siema2 = 'siema';
 
-function competition($first, $second) {
-    if (strcmp($first, $second) === 0) {
-        echo 'Wyrazy są takie same';
-    } else {
-        echo 'Wyrazy nie są jednakowe';
-    }
-    return strcmp($first, $second);
-}
+// function competition($first, $second) {
+//     if (strcmp($first, $second) === 0) {
+//         echo 'Wyrazy są takie same';
+//     } else {
+//         echo 'Wyrazy nie są jednakowe';
+//     }
+//     return strcmp($first, $second);
+// }
 
-competition($siema, $siema2);
+// competition($siema, $siema2);
+
+
+
+
 
 ?>

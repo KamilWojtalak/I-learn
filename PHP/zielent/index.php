@@ -8,19 +8,37 @@
 </head>
 <body>
     
-<form action="script.php" method='post'>
+<?php
 
-    <label for="woda">Ile wód (1.50 PLN/szt): </label>
-    <input type="text" name="woda" id="woda"> <br /><br />
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $animals = [];
 
-    <label for="bulka">Ile bułek (0.55 PLN/szt): </label>
-    <input type="text" name="bulka" id="bulka"> <br /><br />
+    $animal = $_POST['animal'];
 
-    <label for="ciastko">Ile ciastek (1.00 PLN/szt): </label>
-    <input type="text" name="ciastko" id="ciastko"> <br /><br />
+    array_push($animals, $animal);
+}
 
-    <input type="submit" value="Wyślij zamówienie!">
+?>
+
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method='post'>
+
+    <label for="animal">Podaj zwierze: </label>
+    <input type="text" name="animal" id="animal"> <br /><br />
+
+    <input type="submit" value="Wyślij zamówienie!"> <br />
 </form>
+
+<div class="animals__container"><?php print_r($animals) ?></div>
+
+<?php 
+
+$peopleOne = ['Siema', 'siema'];
+$peopleTwo = ['Siemanoi', 'siemano'];
+
+print_r(array_merge($peopleOne, $peopleTwo));
+
+?>
+
 
 </body>
 </html>
