@@ -9,32 +9,38 @@
 <body>
     
 <?php 
-$email = '';
-$errors = array('email' => '');
 
-    if (isset($_POST['submit'])) {
-        $email = htmlspecialchars($_POST['email']);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] =  "$email nie jest zapisany w poprawnym formacie!";
+    class User {
+
+        private $name;
+        private $age;
+
+        public function __construct($name, $age) {
+            $this->name = $name;
+            $this->age = $age;
         }
-        if (!array_filter($errors)) {
-            header('Location: siema.php');
+
+
+        public function getName() {
+            return $this->name;
         }
+
+        public function setName($newName) {
+            $this->name = $newName;
+        }
+
+        public function addFriend() {
+            echo $this->name . ' added a new friend';
+        }
+
+
     }
-
-
+    $Kamil = new User('Kamil', 17);
+    $Kamil->addFriend();
 
 ?>
 
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-    <input type="text" name="email" id="" value='<?php echo $email ?>'>
-    <div class=""><?php echo $errors['email']; ?></div> <br />
 
-    <input type="text" name="siema2"  id=""> <br /> <br />
-    <input type="text" name="siema3" id=""> <br /> <br />
-    <input type="text" name="siema4" id=""> <br /> <br />
-    <input type="submit" name='submit' value="SIEMA">
-</form>
 
 
 
