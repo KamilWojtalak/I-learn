@@ -9,24 +9,28 @@
 <body>
     
 <?php 
-
-$errors = array('email' => 'Błednie wpiałeś mail', 'tekst' => 'Zle! xD');
+$email = '';
+$errors = array('email' => '');
 
     if (isset($_POST['submit'])) {
         $email = htmlspecialchars($_POST['email']);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo "$email nie jest zapisan yw poprawnym formacie";
+            $errors['email'] =  "$email nie jest zapisany w poprawnym formacie!";
+        }
+        if (!array_filter($errors)) {
+            header('Location: siema.php');
         }
     }
-    if (empty($_POST['siema2'])) {
-        echo 'buuuu';
-    }
+
+
 
 ?>
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-    <input type="text" name="email" id=""> <br /> <br />
-    <input type="text" name="siema2" id=""> <br /> <br />
+    <input type="text" name="email" id="" value='<?php echo $email ?>'>
+    <div class=""><?php echo $errors['email']; ?></div> <br />
+
+    <input type="text" name="siema2"  id=""> <br /> <br />
     <input type="text" name="siema3" id=""> <br /> <br />
     <input type="text" name="siema4" id=""> <br /> <br />
     <input type="submit" name='submit' value="SIEMA">
