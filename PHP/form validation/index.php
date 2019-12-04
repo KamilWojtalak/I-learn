@@ -13,13 +13,9 @@
 
     require('user_validator.php');
     $errors = [];
-    
-    if(isset($_POST['submit'])) {
-        
+    if(isset($_POST['submit'])) {  
         $validation = new UserValidator($_POST);
-
         $errors = $validation->validateForm();
-
     }
 
 
