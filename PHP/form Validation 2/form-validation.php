@@ -3,7 +3,7 @@
 class Validator {
     
     public $data;
-    public $errors = ['empty' => 'siema'];
+    public $errors = [];
     public function __construct($data) {
         $this->data = $data;
     }
