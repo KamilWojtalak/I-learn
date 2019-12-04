@@ -5,67 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>siema</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
 <?php 
 
-    class User {
-
-        protected $name;
-        private $age;
-
-        public function __construct($name, $age) {
-            $this->name = $name;
-            $this->age = $age;
-        }
-
-        public function __destruct() {
-            echo "The user $this->name has been deleted <br>";
-        }
-        public function getName() {
-            return $this->name;
-        }
-
-        public function setName($newName) {
-            $this->name = $newName;
-        }
-
-        public function addFriend() {
-            echo $this->name . ' added a new friend <br />';
-        }
-    }
-
-    class AdminUser extends User {
-
-        private $level;
-
-        public function __construct($name, $age, $level) {
-            $this->level = $level;
-            parent::__construct($name, $age);
-        }
-
-        public function getLevel() {
-            echo "The level is $this->level <br/>";
-        }
-
-        public function __clone() {
-            echo "$this->name has been cloned <br>";
-        }
-
+    require('user_validator.php');
+    $errors = [];
+    
+    if(isset($_POST['submit'])) {
         
+        $validation = new UserValidator($_POST);
+
+        $errors = $validation->validateForm();
+
     }
 
-    $Kamil = new User('Kamil', 17);
-    $Kamil->addFriend();
-
-    $AdminUserOne = new AdminUser('Siemaszko', '32', '5');
-    $AdminUserOne->addFriend();
-    $AdminUserOne->getLevel();
-
-    $AdminUserTwo = clone $AdminUserOne;
 
 ?>
+<div class="new-user">
+    <h2>Create a new user</h2>
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+
+      <label>username: </label>
+      <input type="text" name="username" value="<?php echo htmlspecialchars($_POST['username'])?>">
+      <div class="error">
+        <?php echo $errors['username'] ?? '' ?>
+      </div>
+      <label>email: </label>
+      <input type="text" name="email" value="<?php echo htmlspecialchars($_POST['email'])?>">
+      <div class="error">
+        <?php echo $errors['email'] ?? '' ?>
+      </div>
+      <input type="submit" value="submit" name="submit" >
+
+    </form>
+</div>
+
 
 
 
