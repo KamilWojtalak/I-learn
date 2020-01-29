@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+.header,
+.main {
+    background-color: #660000;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.current {
+    background-color: #76C38F;
+                        border-radius: 7px;
+}
+@import 'header';
