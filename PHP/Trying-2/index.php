@@ -12,7 +12,7 @@ class Person {
         $this->lastName = $lastName;
         $this->pet = $pet;
 
-        echo $firstName . ' ' . $lastName . ' has been created!     ';
+        // echo $firstName . ' ' . $lastName . ' has been created!     ';
     }
 
     function setName($newName) {
@@ -28,5 +28,13 @@ class Person {
 $KamilWojtalak = new Person('Kamil', 'Wojtalak', 'pies');
 $KamilWojtalak->setName('Patryk');
 
-echo $KamilWojtalak->getName();
-?>
+// echo $KamilWojtalak->getName();
+// echo phpversion();
+
+
+$animals = ['Dog', 'Cat', 'Elephant', 'Bird', 'Hedgehog'];
+
+// foreach ($animals as $animal) {
+//     echo $animal . '. ';
+// }
+

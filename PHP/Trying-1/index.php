@@ -19,5 +19,15 @@
     
     include 'article.php';
     ?>
+
+    <ul>
+        <?php if (4 > 2) :?>
+            <li>Cztery jest większe niż dwa</li>
+        <?php else: ?>
+            <li>Dwa jest większe od dwóch</li>
+        <?php endif; ?>
+    </ul>
+
+
 </body>
 </html>
