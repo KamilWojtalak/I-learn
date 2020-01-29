@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .header,
@@ -252,5 +253,79 @@
   .header .header__container .container-right {
     width: 100%;
   }
+}
+
+.section__first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: nowarp column;
+          flex-flow: nowarp column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15vh 0;
+}
+
+.section__first .section__first__item {
+  background-color: #fff;
+  width: 22%;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.section__first .section__first__item:hover {
+  background-color: #76C38F;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.section__first .section__first__item:hover .section__first__image {
+  background: #fff;
+}
+
+.section__first .section__first__item:hover .section__first__service-title,
+.section__first .section__first__item:hover .section__first__description {
+  color: white;
+}
+
+.section__first .section__first__item .section__first__image,
+.section__first .section__first__item .section__first__service-title {
+  width: 130px;
+}
+
+.section__first .section__first__item .section__first__image {
+  margin: 50px 0 20px 0;
+  background-color: #333333;
+  height: 130px;
+  border-radius: 7px;
+}
+
+.section__first .section__first__item .section__first__service-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #333333;
+}
+
+.section__first .section__first__item .section__first__description {
+  color: #979797;
+  font-size: 12px;
+  width: 70%;
+  padding: 15px 0 30px 0;
 }
 /*# sourceMappingURL=index.css.map */
