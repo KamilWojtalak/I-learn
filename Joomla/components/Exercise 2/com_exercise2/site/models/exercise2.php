@@ -14,7 +14,16 @@
 
     public function getMsg() {
         if (!isset($this->message)) {
-            $this->message = 'Siema wcześniej nikt nie ustawił wiadomości więc się wyświetlam, proste.';
+            $jinput = JFactory::getApplication()->input;
+            $id = $jinput->get('id', 1, 'INT');
+
+            switch($id) {
+                case 1:
+                    $this->message = 'Jestem tekstem z pierwszej defaultowej opcji';
+                break;
+                case 2:
+                    $this->message = 'Jestem tekstem z drugiej opcji, którą musiałeś jakoś wybrać';
+            }
         }
 
         return $this->message;

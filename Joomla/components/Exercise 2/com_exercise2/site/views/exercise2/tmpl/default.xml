@@ -3,4 +3,18 @@
     <layout title="Deafultowy wygląd componentu"><message> Exercise 2, czy to się wyświetli? To nie jest atrubut z tyułem
     </message></layout>
 
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                    name="id"
+                    type="list"
+                    label="COM_EXERCISE2_DONT_KNOW_WHY_AM_I_WRITING_THIS"
+                    description="COM_EXERCISE2_DESCRIPTION"
+                    default="1">
+                        <option value="1">Pierwsza opcja</option>
+                        <option value="2">Druga opcja</option>
+            </field>
+        </fieldset>
+    </fields>
+
 </metadata>
