@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+    <name>Exercise 1</name>
+    <author>Kamil Wojtalak</author>
+    <version>0.0.1</version>
+    <description>Description of the component</description>
+
+    <update> 
+    
+        <schemas>
+            <schemapath type="mysql"> sql/updates/mysql </schemapath>
+        </schemas>
+     
+     </update>
+
+     <files>
+        <filename>index.html</filename>
+        <filename>exercise.html</filename>
+     </files>
+
+     <administration>
+        <menu link="index.php?option==com_exercise">Exercise 1, Czy to jest nazwa linku w menu?</menu>
+
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>exercise.html</filename>
+            <folder>sql</folder>
+        </files>
+     </administration>
+
+</extension>
