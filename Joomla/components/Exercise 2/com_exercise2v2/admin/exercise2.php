@@ -1,0 +1,1 @@
+Siema to jest dla admina
