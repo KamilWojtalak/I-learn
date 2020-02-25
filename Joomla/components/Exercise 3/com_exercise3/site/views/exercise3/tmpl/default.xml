@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <layout title="COM_EXERCISE3_TITLE">
+        <message>MOgę takie coś wpisać?</message>
+    </layout>
+    <fields
+			name="request"
+			addfieldpath="/administrator/components/com_exercise3/models/fields"
+			>
+		<fieldset name="request">
+			<field
+					name="id"
+					type="exercise3"
+					label="Yyyy... wybierz opcję: "
+					description="Jakiś opis, ok"
+					/>
+		</fieldset>
+	</fields>
+</metadata>

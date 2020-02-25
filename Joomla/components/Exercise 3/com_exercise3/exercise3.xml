@@ -2,20 +2,31 @@
 <extension type="component" version="3.0" method="upgrade">
     <name>Exercise 3!</name>
     <author>Kamil Wojtalak</author>
-    <version>0.0.2</version>
+    <version>0.0.7</version>
     <description>Description ...</description>
 
     <update>
-		<schemas>
-			<schemapath type="mysql">sql/updates/mysql</schemapath>
-		</schemas>
+      <schemas>
+        <schemapath type="mysql">sql/updates/mysql</schemapath>
+      </schemas>
     </update>
+    <install>
+      <sql>
+        <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+      </sql>
+    </install>
+    <uninstall> 
+      <sql>
+        <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+      </sql>
+    </uninstall>
     
     <files folder="site">
       <filename>index.html</filename>
       <filename>exercise3.php</filename>
       <filename>controller.php</filename>
       <folder>views</folder>
+      <folder>models</folder>
     </files>
     <administration>
         <menu link="index.php?option=com_exercise3">Exercise 3!</menu>
@@ -23,8 +34,11 @@
         <files folder="admin">
             <filename>exercise3.php</filename>
             <filename>index.html</filename>
+            <filename>controller.php</filename>
             <folder>sql</folder>
-
+            <folder>tables</folder>
+            <folder>models</folder>
+            <folder>views</folder>
         </files>
     </administration>
 </extension>
