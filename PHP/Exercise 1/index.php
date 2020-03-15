@@ -5,15 +5,17 @@
 function sumOfDigits(int $num) {
     $sum = 0;
     $rem = 0;
-
+    $counter = 0;
     while($num > 1) {
+        ++$counter;
         $rem = $num%10;
         $sum += $rem;
         $num = $num/10;
+
     }
     
 
-    echo $sum . '. ';
+    echo 'Sum of digits ' . $num * (10 ** $counter) . ' is  ' . $sum. '. ';
     return $sum;
 }
 
