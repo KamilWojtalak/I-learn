@@ -1,1 +1,0 @@
-Siema to powinno się pojawić u zwykłego usera
