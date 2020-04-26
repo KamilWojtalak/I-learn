@@ -40,3 +40,27 @@ int main(void)
     printf("%i\n", counter);
     
 }
+
+int main()
+{
+    {
+        cout << "ile masz lat";
+        cin >> wiek;
+        if ((wiek>=18) && (wiek>= 35))
+        {
+            cout << "siema młody\n";
+        }
+        else
+        {
+            if (wiek >= 18)
+            {
+                cout << "won dzieciaku";
+            }
+            else
+            {
+                cout << "spadaj dziadu";
+                return 0;
+            }
+        }
+    }
+}
