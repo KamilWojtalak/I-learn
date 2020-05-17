@@ -26,4 +26,11 @@ class MySecondClass extends MyClass implements SiemaInterface {
             }
         };
     }
+
+    public function iterate_through() {
+        echo __CLASS__ . " iteration: <br>";
+        foreach( $this as $key => $value) {
+            echo "$key: $value <br>";
+        }
+    }
 }

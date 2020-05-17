@@ -1,0 +1,102 @@
+.featured {
+
+    .featured__container {
+        @extend %container;
+        .featured__title-container {
+
+            .featured__title {
+                @extend %title;
+            }
+
+            .featured__line {
+                @extend %line;
+            }
+        }
+
+        .featured__category-container {
+            @extend %container;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            justify-content: center;
+            .featured__category {
+                min-width: 50px;
+                padding: 7px 10px;
+                background-color: $green;
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 5px 5px;
+                border: 3px solid $green;
+                transition: .3s;
+                cursor: pointer;
+                &:hover {
+                    color: $green;
+                    background-color: white;
+                    border: 3px solid $green;
+                } 
+            }
+        }
+
+        .featured__products-container {
+            @extend %products;
+            .featured__link {
+                @extend %link;
+                background-image: url(../images/product9.png);
+                @extend %product;
+                .featured__new {
+                    left: 10px;
+                }
+
+                .featured__sale {
+                    right: 10px;
+                }
+
+                .featured__sale,
+                .featured__new {
+                    position: absolute;
+                    top: 10px;
+                    padding: 7px 10px;
+                    background-color: rgba(0, 0, 0, 0.301);
+                }
+
+                .featured__description-container {
+                    @extend %description-container;
+                    z-index: 2;
+                    .featured__description {
+                        @extend %description;
+                    }
+
+                    .featured__price {
+                        @extend %price;
+                    }
+                }
+
+                .featured__hover {
+
+                    .featured__hover-container {
+
+                        .featured__hover-small {
+
+                        }
+
+                        .featured__hover-big {
+                            
+                        }
+                    }
+                }
+
+                &:hover {
+                    @extend %hover;
+                    .featured__description {
+                        background: $green;
+                    }
+
+                    .featured__price {
+                        background-color: rgb(44, 255, 213);
+                    }
+                }
+            }
+        }
+    }
+}

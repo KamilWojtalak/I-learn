@@ -1,0 +1,59 @@
+.new {
+
+    .new__container {
+        @extend %container;
+        padding: 50px 0;
+        .new__title-section {
+
+            .new__title {
+                @extend %title;
+            }
+
+            .new__line {
+                @extend %line;
+            }
+        }
+        .new__products-container {
+            @extend %products;
+            .new__link {
+                @extend %link;
+                .new__product {
+                    background-image: url(../images/product9.png);
+                    background-attachment: top center;
+                    @extend %product;
+    
+                    .new__description-container {
+                        @extend %description-container;
+                        .new__description {
+                            @extend %description;
+                        }
+    
+                        .new__price {
+                            @extend %price;
+                        }
+                    }
+                    
+                }
+
+                &:hover {
+
+                    @extend %hover;
+                    .new__product {
+
+                        .new__description-container {
+
+                            .new__description {
+                                background: $green;
+                            }
+
+                            .new__price {
+                                background-color: rgb(44, 255, 213);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+ 
+    }
+}

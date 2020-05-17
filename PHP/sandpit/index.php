@@ -11,6 +11,8 @@ MyClass::say_siema();
 $mySecondClass->sayFirstTrait();
 $mySecondClass->collision();
 $mySecondClass->get_class()->display_private_siema();
+echo "<br>";
+$mySecondClass->iterate_through();
 ?>
 </body>
 </html>

@@ -1,0 +1,161 @@
+%container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+%mobile-menu {
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+    @media screen and (min-width: $br-800) {
+        width: auto;  
+        display: flex;
+        flex-flow: row nowrap;         
+    }
+}
+%mobile-menu_hidden {
+    height: 0 !important;
+    transition: 1s;
+    @media screen and (min-width: $br-800) {
+        height: auto !important;           
+    }
+}
+%hamburger {
+    width: 32px;
+    height: 28px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 4px;
+    }
+
+    @media screen and (min-width: $br-800) {
+        display: none;           
+    }
+}
+
+%title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: roboto;
+}
+
+%line {
+    width: 200px;
+    height: 5px;
+    background-color: $green;
+    margin: 30px auto;
+}
+
+%products {
+    display: grid;
+    grid-template-columns: 200px;
+    justify-content: center;
+
+        @media screen and (min-width: $br-800) {
+            grid-template-columns: 200px 200px;
+            column-gap: 50px;
+        }
+
+        @media screen and (min-width: $br-1100) {
+            grid-template-columns: 200px 200px 200px 200px;
+
+        }
+}
+
+%link {
+    display: block;
+    color: inherit;
+    margin: 30px auto;
+    border: 1px solid rgba(0,0,0,.3);
+    position: relative;
+}
+
+%product {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 240px;
+    position: relative;
+}
+
+%hover {
+    .new__hover,
+    .featured__hover {
+        position: absolute;
+        width: 95%;
+        height: calc( 95% - 40px);
+        background-color: rgba(0, 0, 0, 0.551);
+        left: 50%;
+        top: calc( 50% - 20px);
+        transform: translateY(-50%) translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .new__hover-container,
+        .featured__hover-container {
+
+            width: 80%;
+            height: 100px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            .new__hover-small,
+            .featured__hover-small {
+                width: 30%;
+                height: 40px;
+                border: 1px solid white;
+
+                &:hover {
+                    background-color: $green;
+                }
+            }
+
+            .new__hover-big,
+            .featured__hover-big {
+                width: 100%;
+                height: 40px;
+                border: 1px solid white;
+                &:hover {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}
+
+%description-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+%description {
+    width: 80%;
+    background-color: #323232;
+    padding-left: 1em;
+    text-transform: uppercase;
+
+    
+}
+
+%price {
+    width: 20%;
+    text-align: right;
+    background-color: #707070;
+    text-align: center;
+}
