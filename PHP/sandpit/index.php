@@ -1,9 +1,16 @@
-<?php include( 'header.php' );
+<?php 
 
-class Siema {
-   static function sayHello() {
-      echo 'Hello.';
-   }
-}
+spl_autoload_register(function ($name) {
+    include $name . '.php';
+    echo "siema $name created <br>";
+});
 
-call_user_func( array('Siema', 'sayHello') );
+$mySecondClass = new MySecondClass( 'losowy tekst', 'losowy tekst v2' );
+
+MyClass::say_siema();
+$mySecondClass->sayFirstTrait();
+$mySecondClass->collision();
+$mySecondClass->get_class()->display_private_siema();
+?>
+</body>
+</html>
