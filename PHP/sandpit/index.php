@@ -1,18 +1,10 @@
-<?php 
+<?php
+namespace siema;
 
-spl_autoload_register(function ($name) {
-    include $name . '.php';
-    echo "siema $name created <br>";
-});
+// print_r( func_num_args() );
 
-$mySecondClass = new MySecondClass( 'losowy tekst', 'losowy tekst v2' );
 
-MyClass::say_siema();
-$mySecondClass->sayFirstTrait();
-$mySecondClass->collision();
-$mySecondClass->get_class()->display_private_siema();
-echo "<br>";
-$mySecondClass->iterate_through();
-?>
-</body>
-</html>
+register_shutdown_function( function() {
+    echo "\n\nScript finished normally \n\n";
+} ); 
+
