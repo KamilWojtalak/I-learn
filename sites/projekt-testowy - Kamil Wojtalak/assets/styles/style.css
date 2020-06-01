@@ -953,8 +953,9 @@ body {
 }
 
 .form__input_red {
-  border: 3px solid red !important;
+  border: 1px solid red !important;
   border-radius: 5px;
+  color: red;
 }
 
 .footer {
