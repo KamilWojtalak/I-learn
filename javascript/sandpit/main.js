@@ -1,18 +1,3 @@
-const one = {
-    name: 'Kamil',
-    lastname: 'Wojtalak',
-    animal: 'dog',
-};
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const two = {};
-
-for (let key in one) {
-    two[key] = one[key]; 
-}
-two.name = "Siemaszko";
-console.log(`${one.name} ${two.name}`);
-
-const three = {};
-
-Object.assign( three, two);
-console.log(`${three.name}`);
+console.log(randomNumber);
