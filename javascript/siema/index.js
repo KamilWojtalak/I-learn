@@ -1,28 +1,38 @@
-function Employee() {
-    this.name = '';
-    this.dept = 'general';
-}
+function Employee(name, dept) {
+    this.name = name || '';
+    this.dept = dept || 'general';
+  }
+Employee.prototype.specialty = 'none';
 
 function Manager() {
     Employee.call(this);
     this.reports = [];
-}
+  }
+  Manager.prototype = Object.create(Employee.prototype);
+  Manager.prototype.constructor = Manager;
+  
+  function WorkerBee(projs) {
+    this.projects = projs || [];
+  }
+  WorkerBee.prototype = new Employee;
+  WorkerBee.prototype.constructor = WorkerBee;
 
-Manager.prototype = Object.create(Employee.prototype);
-Manager.prototype.constructor = Manager;
+  function SalesPerson() {
+    WorkerBee.call(this);
+    this.dept = 'sales';
+    this.quota = 100;
+ }
+ SalesPerson.prototype = Object.create(WorkerBee.prototype);
+ SalesPerson.prototype.constructor = SalesPerson;
+ 
+ function Engineer(projs, name, mach) {
+    this.base = WorkerBee;
+    this.base(name, 'engineering', projs);
+    this.machine = mach || '';
+  }
+  Engineer.prototype = new WorkerBee;
+ Engineer.prototype.constructor = Engineer;
 
-function WorkBee() {
-    Employee.call(this);
-    this.projects = [];
-}
+ var jane = new Engineer('Doe, Jane', ['navigator', 'javascript'], 'belau');
 
-WorkBee.prototype = Object.create(Employee.prototype);
-// WorkBee.prototype.constructor = WorkBee;
-
-const kamil = new WorkBee;
-
-console.log(kamil.name);
-console.log(kamil.dept);
-console.log(kamil.reports);
-console.log(kamil.projects);
-console.log(kamil);
+ console.log(jane);
