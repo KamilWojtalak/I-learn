@@ -1,38 +1,42 @@
 function Employee(name, dept) {
     this.name = name || '';
     this.dept = dept || 'general';
-  }
-Employee.prototype.specialty = 'none';
+}
 
-function Manager() {
-    Employee.call(this);
-    this.reports = [];
-  }
-  Manager.prototype = Object.create(Employee.prototype);
-  Manager.prototype.constructor = Manager;
-  
-  function WorkerBee(projs) {
-    this.projects = projs || [];
-  }
-  WorkerBee.prototype = new Employee;
-  WorkerBee.prototype.constructor = WorkerBee;
+function Manager(reps) {
+    Employee.call(this, name, dept);
+    this.reports = reps || [];
+}
 
-  function SalesPerson() {
+Manager.prototype = new Employee;
+Manager.prototype.constructor = Manager;
+
+function WorkerBee(name, dept, proj) {
+    Employee.call(this, name, dept);
+    this.project = proj || [];
+}
+
+WorkerBee.prototype = new Employee;
+WorkerBee.prototype.constructor = WorkerBee;
+
+function SalesPerson() {
     WorkerBee.call(this);
     this.dept = 'sales';
     this.quota = 100;
- }
- SalesPerson.prototype = Object.create(WorkerBee.prototype);
- SalesPerson.prototype.constructor = SalesPerson;
- 
- function Engineer(projs, name, mach) {
-    this.base = WorkerBee;
-    this.base(name, 'engineering', projs);
+}
+
+SalesPerson.prototype = new WorkerBee();
+SalesPerson.prototype.constructor = SalesPerson;
+
+
+function Engineer(name, mach) {
+    WorkerBee.call(this, name );
+    this.dept = 'engineering';
     this.machine = mach || '';
-  }
-  Engineer.prototype = new WorkerBee;
- Engineer.prototype.constructor = Engineer;
+}
 
- var jane = new Engineer('Doe, Jane', ['navigator', 'javascript'], 'belau');
+Engineer.prototype = new WorkerBee;
+Engineer.prototype.constructor = Engineer;
 
- console.log(jane);
+const siema = new Engineer('Kamil', 'AMAUHFIUB');
+console.log(siema);
