@@ -1,0 +1,21 @@
+.nav {
+    
+}
+
+.nav__list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.nav__item {
+    background-color: rgb(17, 0, 92);
+    color: #fff;
+
+    text-transform: uppercase;
+    padding: 10px 45px;
+
+    border-radius: 15%;
+
+    font-weight: bold;
+}

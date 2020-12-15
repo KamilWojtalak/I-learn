@@ -1,0 +1,32 @@
+.baner {
+    background-color: rgb(55,22, 42);
+    color: #fff;
+    font-size: 1.4em;
+    text-align: center;
+    height: 100px;
+}
+.main {
+    display: flex;
+}
+.panel__lewy {
+    background-color: rgb(142,115,110);
+    width: 30%;
+    height: 600px;
+    color: #fff;
+
+}
+
+.panel__prawy {
+    background-color: rgb(230, 230, 20);
+    width: 70%;
+    height: 600px;
+    font-size: 1.2em;
+
+}
+
+.stopka {
+    background-color: rgb(132, 115, 110);
+    color: #fff;
+    text-align: right;
+    height: 100px;
+}
