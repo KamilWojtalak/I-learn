@@ -98,11 +98,12 @@ EvilCircle.prototype.collisionDetect = function() {
 
       if (distance < this.size + balls[j].size) {
         balls[j].exists = false;
-        ++counter;
+        const index = balls.indexOf(balls[j]);
+
+        balls.splice(index, 1);
       }
     }
   }
-}
 
 const evil = new EvilCircle(
   width / 2,

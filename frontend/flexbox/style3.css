@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    background-color: #ccc;
+    align-items: center;
+    height: 50px;
+}
+
+.child {
+    padding: 0 20px;
+}
+
+@media all and (max-width: 800px) {
+    .parent {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .parent {
+        flex-flow: column wrap;
+        height: auto;
+    }
+    .child {
+        padding: 10px 0;
+    }
+}

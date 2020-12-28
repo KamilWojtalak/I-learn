@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 10px 5px;
+}
