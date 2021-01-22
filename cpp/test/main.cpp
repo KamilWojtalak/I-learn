@@ -8,6 +8,6 @@ int main()
 {
     cout << "Siema: " << endl;
     cin >> test;
-    cout << test << endl;
+    cout << endl << test;
     return 0;
 }
