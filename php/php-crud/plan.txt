@@ -1,0 +1,14 @@
+
+JS
+    AJAX
+    Validation
+
+PHP
+Validation
+DB conneciton
+DB opeartions
+    dodawaniae uzytwkoników
+    modyfikowanie użytkowników
+    usuwanie użytkowników
+    wyświetalnie użytkowników
+Create Table and db
